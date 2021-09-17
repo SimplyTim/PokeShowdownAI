@@ -8,6 +8,7 @@ import math
 import asyncio
 import time
 import gym
+import keys
 
 from poke_env.player.player import Player
 from poke_env.player.random_player import RandomPlayer
@@ -180,7 +181,7 @@ async def main():
 
     semi_smart_player = SemiSmartPlayer(
         battle_format="gen8randombattle",
-        player_configuration= PlayerConfiguration("hisorryimverybad", "balls9"),
+        player_configuration= PlayerConfiguration(keys.username, keys.pw),
         server_configuration=ShowdownServerConfiguration,
         start_timer_on_battle_start=True
     )

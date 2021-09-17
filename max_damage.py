@@ -1,6 +1,7 @@
 import asyncio
 import time
 import gym
+import keys
 
 from poke_env.player.player import Player
 from poke_env.player.random_player import RandomPlayer
@@ -38,7 +39,7 @@ async def main():
 
     max_damage_player = MaxDamagePlayer(
         battle_format="gen8randombattle",
-        player_configuration= PlayerConfiguration("hisorryimverybad", "balls9"),
+        player_configuration= PlayerConfiguration(keys.username, keys.pw),
         server_configuration=ShowdownServerConfiguration
     )
 
